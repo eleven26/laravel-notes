@@ -84,3 +84,5 @@
 * 注意: 上面 `load` 方法的返回值没有任何意义, `return` 在里面的意义是中断函数流程
     * [`https://gist.github.com/cebe/6206940`](https://gist.github.com/cebe/6206940)
     * [`https://github.com/php/php-src/blob/1d6a136051051e4e25f89a280ca92fde2da04463/ext/spl/php_spl.c#L411`](https://github.com/php/php-src/blob/1d6a136051051e4e25f89a280ca92fde2da04463/ext/spl/php_spl.c#L411)
+
+* 另外: lumen 默认不使用 `Facade`, 需要使用的话, 需要在 `app.php` 加上 `$app->withFacades();`
