@@ -4,7 +4,7 @@
     * `\Illuminate\Foundation\Http\Kernel::$bootstrappers`
     * `\Illuminate\Foundation\Console\Kernel::$bootstrappers`
 
-框架启动的时候会启动上面两个属性里面预设的类, 里面包含了 `\Illuminate\Foundation\Bootstrap\RegisterFacades`
+* 框架启动的时候会启动上面两个属性里面预设的类, 里面包含了 `\Illuminate\Foundation\Bootstrap\RegisterFacades`
     ```php
     /**
      * Bootstrap the given application.
@@ -82,5 +82,5 @@
 因此, 自动加载的时候会先找出完整的命名空间(使用 `class_alias` 定义 `class` 别名), 然后在后续的自动加载中就可以成功加载 `Facades` 对应的类了。
 
 * 注意: 上面 `load` 方法的返回值没有任何意义, `return` 在里面的意义是中断函数流程
-    * `https://gist.github.com/cebe/6206940`
-    * `https://github.com/php/php-src/blob/1d6a136051051e4e25f89a280ca92fde2da04463/ext/spl/php_spl.c#L411`
+    * [`https://gist.github.com/cebe/6206940`](https://gist.github.com/cebe/6206940)
+    * [`https://github.com/php/php-src/blob/1d6a136051051e4e25f89a280ca92fde2da04463/ext/spl/php_spl.c#L411`](https://github.com/php/php-src/blob/1d6a136051051e4e25f89a280ca92fde2da04463/ext/spl/php_spl.c#L411)
